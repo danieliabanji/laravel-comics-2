@@ -6,7 +6,18 @@ $linksSinglePage = config('db_comics.linksSinglePage');
 @extends('layouts.app')
 
 @section('content')
-    <div class="blue"></div>
+    <div class="blue">
+        <div class="d-flex flex-row-reverse">
+            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success ms-3 m-5">Modifica</a>
+            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger ms-3 mt-5"
+                    onclick="return confirm('{{ __('Are you sure you want to delete?') }}')">
+                    {{ __('Cancella') }}</button>
+            </form>
+        </div>
+    </div>
     <div id="singlepage">
         <section class="container position-relative">
             <div class="img-box"><img src="{{ $comic->thumb }}" alt=""></div>

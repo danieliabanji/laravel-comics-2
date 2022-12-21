@@ -220,7 +220,7 @@ return [
         ],
         [
             "text"=> "Comics",
-            "url"=> "comics",
+            "url"=> "http://127.0.0.1:8000/comics",
             "active"=> true,
         ],
         [

@@ -20,7 +20,10 @@ $linksImage = config('db_comics.linksImage');
                                         <div class="img-box"><img src="{{ $comic['thumb'] }}" alt=""></div>
                                     </a>
                                     <span class="title">{{ $comic['series'] }}</span>
+                                    <br>
                                     <span class="title">{{ $comic['price'] }}</span>
+                                    <br>
+
                                 </div>
 
                             </div>
@@ -28,7 +31,7 @@ $linksImage = config('db_comics.linksImage');
                     @endforeach
 
                 </div>
-                <a href="{{ route('comics.create') }}"><button class="btn btn-primary text-uppercase">Add
+                <a href="{{ route('comics.create') }}"><button class="btn btn-primary text-uppercase mt-5">Add
                         Comics</button></a>
             </div>
         </div>
